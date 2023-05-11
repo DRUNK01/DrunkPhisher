@@ -41,16 +41,8 @@ def install_Ngrok():
     os.system("mv -f ngrok " + binPath + "ngrok")
     os.system("chmod +x " + binPath+ "ngrok")
     os.system("rm -rf " + file)
-    
-    time.sleep(2)
-    if not (chroot == ""):
-        os.system("termux-chroot ngrok authtoken 2MAnDjtUDq8gCX4VEej2KZL60xN_72EDqvCNGi9bH17QkJHdo")
-    else:
-        os.system("ngrok authtoken 2MAnDjtUDq8gCX4VEej2KZL60xN_72EDqvCNGi9bH17QkJHdo")
-    
-    file = open(binPath+"ngtrial.json", "w")
-    file.write("{\"auth\": \"2MAnDjtUDq8gCX4VEej2KZL60xN_72EDqvCNGi9bH17QkJHdo\", \"trialLeft\": 5}")
-    file.close()
+
+
     
     print("\n[\033[92m!\033[37m] Ngrok install Complete")
 
